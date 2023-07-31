@@ -10,9 +10,12 @@ import "./Form.css";
 function Form() {
  
  
+ 
 const[input,setInput]=useState('')
-const Sum =()=> input.reduce( (a, b)=>a+b,0) 
+
 const handleChange =(e)=>{setInput(e.target.value)};
+
+
 console.log(handleChange)
 
 const [option,setOption]=useState('');
@@ -21,11 +24,6 @@ const optionHandle=(e)=>{const value=e.target.value;setOption(value);};
 console.log(optionHandle)
 
 
-// let mySum=input.reduce((a,b)=>a=a+b,0)
-
-// console.log(mySum)
-
-// const newSum= input.replace(",","newchar", -1)
 
 
 
@@ -66,30 +64,26 @@ console.log(optionHandle)
           <option value="average" >average</option>
           <option value="mode" >mode</option>
         </select>
-        <button type="submit" onChange={Sum} >Calculate</button>
+        <button type="button" onClick={handleClick} >Calculate</button>
       </form>
       <section id="result">
         
       </section>
-    <h2>{input}</h2>
-    <p>{option}</p>
-    <p>Sum Of Nums = {add() }</p>
+    {/* <h2>{input}</h2> */}
+    <p id="option" >{option}</p>
+    <p id="sum" hidden="hidden">Sum Of Nums = {add() }</p>
     <h1>Count of Numbers Input ={count()}</h1>
 
-    <p>Here is the Mean/Average = {mean() }</p>
+    <p id="average" hidden="hidden">Here is the Mean/Average = {mean() }</p>
 
-    <h1>Most Frequent Apperance={mode()}</h1>
+    <h1 id="mode" hidden="hidden">Most Frequent Apperance={mode()}</h1>
+    <p id="error" hidden="hidden">INVALID INPUT ERROR</p>
     
     </>
   );
   
   function add(){
     const inputCLone=[...input]
-    
-    // let count= inputCLone[i].split(",").length
-    
-    
-    // const[plus,setPlus]=useState(inputCLone);
     
     let sum=0;
     
@@ -155,11 +149,75 @@ console.log(optionHandle)
      return parseInt(item)
 
    }
+ function handleClick(){
+
+  const x=document.querySelector('p#sum');
+  const a=document.querySelector('p#error');
+  const b=document.querySelector('p#sum').textContent
+  const y=document.querySelector('p#average');
+  const z= document.querySelector('h1#mode');
+  const operation= document.querySelector('p#option').textContent
+
   
+  
+  
+
+
+
+  if(operation === "sum"){
+    x.removeAttribute('hidden')
+
+  }
+  if(operation !== "sum"){
+
+    x.setAttribute('hidden',"hidden")
+
+  }
+
+
+  if(operation === "average"){
+    y.removeAttribute('hidden')
+
+  }
+  if(operation !== "average"){
+
+    y.setAttribute('hidden',"hidden")
+
+  }
+  if(operation === "mode"){
+    z.removeAttribute('hidden')
+
+  }
+  if(operation !== "mode"){
+
+    z.setAttribute('hidden',"hidden")
+
+  }
+  if(b.includes("NaN")){
+    a.removeAttribute('hidden')
+
+  }
+  if( ! b.includes("NaN")){
+
+    a.setAttribute('hidden',"hidden")
 
   }
 
   
+  
+  
+  
+
+
+}
+
+}
+
+ 
+
+  
+
+
   
 
 export default Form;

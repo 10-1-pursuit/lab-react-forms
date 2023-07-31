@@ -3,3 +3,14 @@ select.error {
   border: 1px solid red;
   outline: none !important;
 }
+
+
+p#sum{border:2px solid red;display: hidden;} 
+
+
+
+ p#average{border:4px solid blue;display: hidden;}
+
+ h1#mode{border :7px solid orange; display:hidden;}
+
+ p#error{border: 3px dotted red;display:hidden;animation: name duration timing-function delay iteration-count direction fill-mode;}
