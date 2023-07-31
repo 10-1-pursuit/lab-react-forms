@@ -46,6 +46,17 @@ const calculateNumArr = (operation)=>{
     const numAverage = numSum / numArr.length + 1
 setResult(numAverage)
   }
+  function getMode(numArr){
+    const numCount= {};
+    numArr.forEach((num)=>{
+      numCount[num] = (numCount[num] || 0) + 1;
+    })
+    const valuesArr = Object.values(numCount)
+    const highestCount = Math.max(...valuesArr)
+    const modeIndex = valuesArr.indexOf(highestCount)
+    const numMode =numArr[modeIndex]
+    setResult(numMode)
+  }
 }
 function handleSubmit(event){
   event.preventDefault();
