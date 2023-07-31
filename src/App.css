@@ -1,1 +1,16 @@
-/* Add your own CSS! */
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:50px;
+}
+
+input,
+select, 
+button{
+margin:10px;
+}
+
+.error{
+    border:1px solid red;
+}
