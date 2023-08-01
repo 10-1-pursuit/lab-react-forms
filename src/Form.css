@@ -5,7 +5,7 @@ select.error {
 }
 
 
-p#sum{border:2px solid red;display: hidden;} 
+ p#sum{border:2px solid red;display: hidden;} 
 
 
 
@@ -13,4 +13,4 @@ p#sum{border:2px solid red;display: hidden;}
 
  h1#mode{border :7px solid orange; display:hidden;}
 
- p#error{border: 3px dotted red;display:hidden;animation: name duration timing-function delay iteration-count direction fill-mode;}
+ p#error{border: 3px dotted red;display:hidden;animation: name duration timing-function delay iteration-count direction fill-mode;} 
