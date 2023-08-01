@@ -70,8 +70,8 @@ console.log(optionHandle)
       <section id="result">
         
       </section>
-    {/* <h2>{input}</h2> */}
-    <p id="option" >Your Selected Operation ={option}</p>
+     {/* <h2>{input}</h2>  */}
+    <p id="option" >{option}</p>
     <p id="sum" hidden="hidden">Sum Of Nums = {add() }</p>
     <h1>Count of Numbers Input ={count()}</h1>
 
