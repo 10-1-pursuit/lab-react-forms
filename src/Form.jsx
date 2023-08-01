@@ -56,6 +56,7 @@ console.log(optionHandle)
   // let input= document.getElementById("#values")
   return (
     <>
+    <div id="border">
       <form>
         <input id="values" name="values" type="text" onChange={handleChange} />
         <select id="operation" name="operation" onChange={optionHandle}>
@@ -77,8 +78,8 @@ console.log(optionHandle)
     <p id="average" hidden="hidden">Here is the Mean/Average = {mean() }</p>
 
     <h1 id="mode" hidden="hidden">Most Frequent Apperance={mode()}</h1>
-    <p id="error" hidden="hidden">INVALID INPUT ERROR</p>
-    
+    <p id="error" hidden="hidden">🙈INVALID ⚠️INPUT 🔐ERROR🛑</p>
+    </div>
     </>
   );
   
