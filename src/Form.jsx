@@ -9,6 +9,7 @@ function Form() {
     <>
       <form onSubmit={(e) => {
         e.preventDefault();
+
         if (e.target.operation.value === "sum") {
           let total = inputs.split(",")
           total = total.map((n) => Number(n));
@@ -24,24 +25,23 @@ function Form() {
           let finalTotal = closeTotal / length
           setInputs(finalTotal)
         }
+
         if(e.target.operation.value === "mode"){
           let total = inputs.split(",")
           let modeTracker = {}
           total = total.map((n) => Number(n));
-       
-          for(let num of total){
-           if(!modeTracker[num]){
-            modeTracker[num] = 1
-           }else{
-            modeTracker[num] += 1
-           }
-          }
       
-         let max =  Object.keys(modeTracker).reduce((a, b) => {
-          modeTracker[a] > modeTracker[b] ? a : b
-        })
-         setInputs(max)
-         
+          for(let num of total){
+            if(!modeTracker[num]){
+              modeTracker[num] = 1
+            }else{
+              modeTracker[num] += 1
+            }
+           
+          }
+
+         let mode =  Object.keys(modeTracker).reduce((a, b) => modeTracker[a] > modeTracker[b] ? a : b )
+         setInputs(mode)
         }
       }} >
 
