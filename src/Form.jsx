@@ -1,45 +1,36 @@
 import React, { useState } from "react";
 import "./Form.css";
 import SelectOperation from "./Components/SelectOperation";
-import CalculateButton from "./Components/CalculateButton";
+// import CalculateButton from "./Components/CalculateButton";
 
 function Form() {
   const [inputValue, setInputValue] = useState("");
   const [showInputText, setShowInputText] = useState(false);
-  //  function(){
-
-  //  }
+  
 
   return (
     <>
       <form
         onSubmit={(syntheticE) => {
           syntheticE.preventDefault();
-
           setShowInputText(true);
-          // [syntheticE.target.values.value]
+          //select options' value
+          const arithmaticMethod = syntheticE.target.operation.value;
+          console.log(arithmaticMethod);
+          //const totalNum = arithmaticMethod.map((e) => console.log(e));
+          //if sum - add all the numbers -
+          //if average -add all the numbers and divide by total #s
+          //if mode - which # is repeated/find every occurance - FILTEREEREREFRF
         }}
-      >
-        <input
-          id="values"
-          name="values"
-          type="text"
-          onChange={(syntheticEvent) => {
-            setInputValue(syntheticEvent.target.value);
-          }}
-          value={inputValue}
-        />
-        {/* <select id="operation" name="operation"  onChange={
-     (syntheticE) => {
-    console.log(syntheticE.target.value)}}>
-          <option value=""></option>
-          <option value="sum">sum</option>
-          <option value="average">average</option>
-          <option value="mode">mode</option>
-        </select> */}
-        <SelectOperation />
-        <CalculateButton />
-      </form>
+      ></form>
+      <input type="text" id="numerical" onSubmit={(e)=>{
+        console.log(e.target.value)
+        
+        //i want this onSubmit to create a span/p/something for text
+      }}/>
+      <SelectOperation />
+       <button type="submit">Calculate</button>
+
       <section id="result">
         <p>{showInputText ? <span>{inputValue}</span> : <></>}</p>
       </section>
