@@ -26,22 +26,21 @@ function Form() {
           setInputs(finalTotal)
         }
 
-        if(e.target.operation.value === "mode"){
+        if (e.target.operation.value === "mode") {
           let total = inputs.split(",")
           let modeTracker = {}
           total = total.map((n) => Number(n));
-      
-          for(let num of total){
-            if(!modeTracker[num]){
+
+          for (let num of total) {
+            if (!modeTracker[num]) {
               modeTracker[num] = 1
-            }else{
+            } else {
               modeTracker[num] += 1
             }
-           
           }
 
-         let mode =  Object.keys(modeTracker).reduce((a, b) => modeTracker[a] > modeTracker[b] ? a : b )
-         setInputs(mode)
+          let mode = Object.keys(modeTracker).reduce((a, b) => modeTracker[a] > modeTracker[b] ? a : b)
+          setInputs(mode)
         }
       }} >
 
