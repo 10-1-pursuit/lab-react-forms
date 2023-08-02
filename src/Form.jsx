@@ -39,7 +39,14 @@ function Form() {
             }
           }
 
-          let mode = Object.keys(modeTracker).reduce((a, b) => modeTracker[a] > modeTracker[b] ? a : b)
+          //Since I want the key values I use Object.keys to get an array of keys so I can do arithmetic using array reduce method. If key[value a] > key[value b], return key a.
+
+          let mode = Object.keys(modeTracker).reduce((a, b) => {
+            if (modeTracker[a] > modeTracker[b]) {
+              return a;
+            }
+            return b;
+          })
           setInputs(mode)
         }
       }} >
