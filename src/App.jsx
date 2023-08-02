@@ -6,7 +6,7 @@ function App() {
   return (
     <main>
       <p>Enter each number in the array, separated by a ','</p>
-      <Form />
+      <Form className='form'/>
     </main>
   );
 }

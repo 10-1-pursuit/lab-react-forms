@@ -3,3 +3,17 @@ select.error {
   border: 1px solid red;
   outline: none !important;
 }
+
+form{
+
+  background-color: burlywood;
+
+}
+
+#values{
+  border-radius: 55px;
+}
+
+button{
+  border-radius: 55px;
+}
