@@ -1,13 +1,18 @@
 import React from "react";
-import Form from "./Form";
+import Form from "./Form.jsx";
 import "./App.css";
 
 function App() {
   return (
-    <main>
-      <p>Enter each number in the array, separated by a ','</p>
-      <Form />
-    </main>
+    <>
+      <header>
+        <h1>React Forms Lab</h1>
+      </header>
+      <main>
+        <h4>Enter each number in the array, separated by a ','</h4>
+        <Form />
+      </main>
+    </>
   );
 }
 

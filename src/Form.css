@@ -3,3 +3,89 @@ select.error {
   border: 1px solid red;
   outline: none !important;
 }
+
+button {
+  /* background-color: blue; */
+  color: yellow;
+  font-weight: bolder;
+  border-width: 3px;
+  background: #2e9aff;
+  background: -moz-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #030061 85%,
+    #06035e 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, #2e9aff),
+    color-stop(85%, #030061),
+    color-stop(100%, #06035e)
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #0d07a2 85%,
+    #06035e 100%
+  );
+  background: -o-linear-gradient(-45deg, #2e9aff 0%, #0e098d 85%, #06035e 100%);
+  background: -ms-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #08029d 85%,
+    #06035e 100%
+  );
+  background: linear-gradient(135deg, #2e9aff 0%, #0e08ad 85%, #06035e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9aff', endColorstr='#06035e', GradientType=1 );
+  width: 87px;
+}
+
+#operation {
+  width: 87px;
+  /* background-color: yellow; */
+  color: yellow;
+  font-weight: bolder;
+  border-width: 3px;
+  background: #2e9aff;
+  background: -moz-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #030061 85%,
+    #06035e 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, #2e9aff),
+    color-stop(85%, #030061),
+    color-stop(100%, #06035e)
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #0d07a2 85%,
+    #06035e 100%
+  );
+  background: -o-linear-gradient(-45deg, #2e9aff 0%, #0e098d 85%, #06035e 100%);
+  background: -ms-linear-gradient(
+    -45deg,
+    #2e9aff 0%,
+    #08029d 85%,
+    #06035e 100%
+  );
+  background: linear-gradient(135deg, #2e9aff 0%, #0e08ad 85%, #06035e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9aff', endColorstr='#06035e', GradientType=1 );
+  text-align: center;
+}
+
+#values {
+  border-style: ridge;
+  border-width: 3px;
+}
+
+#result {
+  color: darkred;
+  /* width: fit-content; */
+  /* text-shadow: 2px 2px 2px rgba(128, 0, 0, 0.99); */
+}
