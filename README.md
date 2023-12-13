@@ -2,9 +2,31 @@
 
 Using React, build a form that will dynamically take in text and perform a mathematical operation on it.
 
-![Example of the clicker game.](./assets/sum.gif)
+[Deployed App](https://transcendent-nasturtium-b2cfd5.netlify.app/)
 
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
 
 ## Lab Setup
 
